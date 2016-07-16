@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+	{% load staticfiles %}
+    <title>FBJ</title>
+    <!--boootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--my css -->
+    <link rel="stylesheet" href="{% static 'tempSite/css/app.css' %}" type="text/css" />
+    <link rel="icon" href="{% static 'tempSite/images/football.png' %}"/>
+    <style type="text/css">html, body{height:100%;} </style>
+  </head>
+  <body id="fbj_body">
+    <div class="fbj_wrapper">
+      <div class="fbj_header"><strong>Welcome to Football Blackjack</strong><img src="{% static 'tempSite/images/FBJ_logo.png' %}"></div>
+      <div class="fbj_flex_row">
+        <div class="fbj_nav">
+          <div class="nav_list">
+            <ul>
+              <li><a href="#_about">About</a></li>
+              <li> <a href="#_rules">Rules</a></li>
+              <li><a href="#_scores">Scores</a></li>
+              <li><a href="#_fixtures">Fixtures</a></li>
+              <li><a href="#fbj_body">Top</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="fbj_main_wrap">
+          <div id="_about" class="about">
+            <h2>About Football Blackjack</h2>
+            <p>Tim came up with a great way to lose money, so we thought we would give it a go.</p>
+          </div>
+          <div id="_rules" class="rules">
+            <h2>Rules</h2>
+            <p>
+              Get a randomly selected team at the start of each round.<br>
+              Land on exactly 11 league goals.<br>
+              If your team goes over, you start again at 0.<br>
+              Only league games count.<br>
+              If you win you get £1 per player per week.<br>
+              Give £5 per month to Simon in Process
+            </p>
+          </div>
+          <div id="_scores" class="scores">
+            <h2>Round 6 Scores</h2>
+            <p>Week 4: £56 for the taking</p>
+            <table>
+              <tr>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Goals</th>
+              </tr>
+              <tr>
+                <td>Simon Jones</td>
+                <td>Arsenal</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>John Lambert</td>
+                <td>York City</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>Howard Johnson</td>
+                <td>Barnet</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Tim Wells</td>
+                <td>Chesterfield</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Gavin Harrison</td>
+                <td>Newport County</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Jim Bolton</td>
+                <td>Swindon Town</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Darius Barkunas</td>
+                <td>West Ham United</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Lewis Morland</td>
+                <td>Bristol Rovers</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Eddie Kelsall</td>
+                <td>Burton Albion</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Nigel Scaife</td>
+                <td>Rochdale</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Minde Abramovas</td>
+                <td>Blackburn Rovers</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Tom Blanchard</td>
+                <td>Millwall</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Luke Sharp</td>
+                <td>Crystal Palace</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Jake Wormald</td>
+                <td>Southend United</td>
+                <td>3</td>
+              </tr>
+            </table>
+            <p><small>Goals last updated on 24 / 4 / 2016</small></p>
+          </div>
+          <div id="_fixtures" class="fixtures">
+            <h2>Round 6 Fixtures              </h2>
+            <table>
+              <tr>
+                <th>Week 4</th>
+              </tr>
+              <tr>
+                <td class="date">Saturday 30th April</td>
+              </tr>
+              <tr> 
+                <td>Newcastle vs <b>Crystal Palace</b></td>
+              </tr>
+              <tr>
+                <td>West Brom vs <b>West Ham</b></td>
+              </tr>
+              <tr>
+                <td><b>Arsenal</b> vs Norwich</td>
+              </tr>
+              <tr>
+                <td>Rotherham vs <b>Blackburn Rovers</b></td>
+              </tr>
+              <tr>
+                <td><b>Burton</b> vs Gillingham</td>
+              </tr>
+              <tr>
+                <td><b>Chesterfield</b> vs Bury</td>
+              </tr>
+              <tr>
+                <td><b>Millwall</b> vs Oldham</td>
+              </tr>
+              <tr>
+                <td><b>Rochdale</b> vs <b>Swindon</b></td>
+              </tr>
+              <tr>
+                <td><b>Southend</b> vs Bradford</td>
+              </tr>
+              <tr>
+                <td><b>Barnet</b> vs Yeovil</td>
+              </tr>
+              <tr>
+                <td><b>Newport</b> vs Notts County</td>
+              </tr>
+              <tr>
+                <td><b>York City</b> vs <b>Bristol Rovers</b></td>
+              </tr>
+              
+            </table>
+          </div>
+          <div id="_archive" class="archive">
+            <h2>Past Winners</h2>
+            <p><small>coming soon...</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="fbj_footer">
+        <div class="sign">S Jones 2016</div>
+      </div>
+    </div>
+  </body>
+</html>
