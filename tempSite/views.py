@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from .models import League
+
 # Create your views here.
 
 def index(request):
@@ -7,4 +9,8 @@ def index(request):
 	return render(request, 'tempSite/index_cp.html') # static old site with link to test page in fbj logo
 
 def test(request):
-	return render(request, 'tempSite/test_page.html')
+	leagues = League.objects.all()
+	context={
+		'leagues':leagues
+	}
+	return render(request, 'tempSite/test_page.html',context)
