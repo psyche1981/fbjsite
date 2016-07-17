@@ -9,7 +9,7 @@ def index(request):
 	return render(request, 'tempSite/index_cp.html') # static old site with link to test page in fbj logo
 
 def test(request):
-	leagues = League.objects.all()
+	leagues = League.objects.filter(active=True)
 	context={
 		'leagues':leagues
 	}
