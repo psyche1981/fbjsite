@@ -2,11 +2,9 @@
 
 {% block content %}
 
-	<div>Testing Area</div>
-	<div>
-	{% for l in leagues %}
-	<h3>{{ l }}</h3>
-	{% endfor %}
+	<div><h2>Testing Area</h2></div>
+	<div class='scores'>
+	{% include 'tempSite/includes/fbj_round_table.html' %}
 	</div>
 
 {% endblock %}
