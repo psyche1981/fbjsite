@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import League, Team
+from .models import League, Team, Player
 
 # Create your views here.
 
@@ -11,6 +11,7 @@ def index(request):
 def test(request):
 	teams_qs = Team.objects.filter(league__active = True).select_related('league')
 	leagues_qs = League.objects.filter(active = True).order_by('league_id')
+	player_qs = Player.objects.all()
 	pl = []
 	ch = []
 	l1 = []
@@ -37,6 +38,7 @@ def test(request):
 	team_zip = zip(ch, l1, l2)
 	context={
 		'leagues':leagues_qs,
+		'players':player_qs,
 		'teams':teams,
 		'heads':['Player', 'Team', 'Goals'],
 		'team_zip':team_zip

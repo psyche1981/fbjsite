@@ -17,3 +17,11 @@ class Team(models.Model):
 
 	def __str__(self):
 		return self.team_name
+
+class Player(models.Model):
+	player_id = models.AutoField(primary_key = True)
+	player_name = models.CharField(max_length=100)
+	active = models.BooleanField(default=False)
+
+	def __str__(self):
+		return self.player_name
