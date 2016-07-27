@@ -28,6 +28,7 @@ def test(request):
 			l2.append(t)
 		if t.league == leagues_qs[4]:
 			sp.append(t)
+	scores = [1, 2, 10, 4,5,8,3,4,5,8,9]
 	teams = {
 		'pl':pl,
 		'ch':ch,
@@ -35,12 +36,11 @@ def test(request):
 		'l2':l2,
 		'sp':sp
 	}
-	team_zip = zip(ch, l1, l2)
+	tbl_zip = zip(player_qs, l1, scores)
 	context={
 		'leagues':leagues_qs,
-		'players':player_qs,
 		'teams':teams,
 		'heads':['Player', 'Team', 'Goals'],
-		'team_zip':team_zip
+		'tbl_zip':tbl_zip
 	}
 	return render(request, 'tempSite/test_page.html',context)
