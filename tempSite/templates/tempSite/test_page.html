@@ -3,11 +3,13 @@
 {% block content %}
 
 	<div><h2>Testing Area</h2></div>
+	<div id="_about" class="about">
 	{% include 'tempSite/includes/about.html' %}
+	</div>
+	<div id="_rules" class="rules">
 	{% include 'tempSite/includes/rules.html' %}
-	
+	</div>
 	<div class='scores'>
-		<h2>The Scores</h2>
 	{% include 'tempSite/includes/fbj_round_table.html' %}
 	</div>
 
